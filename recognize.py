@@ -2,9 +2,11 @@ import torch
 import numpy as np
 import cv2, json
 
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5/runs/train/exp4/weights/best.pt', force_reload=True)
+## Clone the yolov5 model from https://github.com/ultralytics/yolov5
 
-# model = torch.hub.load('ultralytics/yolov5', 'custom', path='last.pt', force_reload=True)
+# model = torch.hub.load('ultralytics/yolov5', 'custom', path='yolov5/runs/train/exp4/weights/best.pt', force_reload=True)
+
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='last.pt', force_reload=True)
 
 cap = cv2.VideoCapture(0)
 while cap.isOpened():
